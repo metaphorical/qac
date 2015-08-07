@@ -42,7 +42,7 @@ var HomeView = Backbone.View.extend({
             });
             $('.js-report-list').html(reportView.render());
             $('.js-loader').hide();
-            $(e.currentTarget).append('Test again').show();
+            $(e.currentTarget).text('Test again').show();
         });
     },
     tabSwitch: function(e) {

@@ -1,0 +1,28 @@
+extends layout/default.jade
+
+block content
+    div.picker
+        h3 Accessibility test
+        div
+            p type in the address that you want to test
+            div.inputHolder
+                input(type="text", placeholder="www.whatever.com").js-address
+        div.Options
+            div
+                label Need server auth
+                input(type="checkbox").js-need-auth
+            div.hiddenForm.js-auth-form
+                div.inputHolder
+                    label Username
+                    input(type="text", name="username").js-auth-name
+                div.inputHolder
+                    label Password
+                    input(type="text", name="password").js-auth-pass
+        button.js-perform-test Test
+        div.loader.js-loader
+            img(src="/img/ajax-loader.gif")
+            span ...please wait
+    div.info-box
+        small This tool allows simple WCAG2 (A, AA and AAA) testing of any page, even ones requiring auth.
+        small  For testing localhost apps, you would need to expose them or download this app's code from github and run it locally.
+    div.reportList.js-report-list

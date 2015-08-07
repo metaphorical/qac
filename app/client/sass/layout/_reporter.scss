@@ -1,0 +1,192 @@
+body {
+    background-color: $color-background-main;
+}
+.Reporter {
+    .picker {
+        width: 50%;
+        margin: 10px auto;
+        text-align: center;
+
+        padding: 10px 0;
+        background-color: #fff;
+
+        @include box-shadow-shallow;
+
+        border-radius: $radius-default;
+    }
+    .hiddenForm {
+        display: none;
+    }
+    .inputHolder {
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+    button  {
+        padding: 6px 20px;
+        border-radius: $radius-default;
+        border: none;
+        color: #fff;
+        background-color: $color-main;
+        @include box-shadow-shallow;
+    }
+
+    .reportList {
+        width: 100%;
+        .tab-head {
+            padding: 15px;
+            border-radius: $radius-default;
+            background-color: #E3E3E3;
+            cursor: pointer;
+            width: 32%;
+            margin-left: 2%;
+            margin-bottom: 20px;
+            display: inline-block;
+            @include box-shadow-shallow;
+            &:first-child {
+                margin-left: 0px;
+            }
+            &.active {
+                box-shadow: none;
+            }
+            h3 {
+                text-align: center;
+            }
+            ul {
+                li {
+                    list-style: none;
+                    width: 30%;
+                    margin-left: 3%;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 5px;
+                    border-radius: $radius-default;
+                    &.active {
+                        border: 2px solid white;
+                    }
+                }
+                &.error-filter {
+                    li {
+                        background-color: $color-errorish;
+                    }
+                }
+                &.warning-filter {
+                    li {
+                        background-color: $color-warning;
+                    }
+                }
+                &.notice-filter {
+                    li {
+                        background-color: $color-notice;
+                    }
+                }
+            }
+        }
+        .tabs-container {
+            width: 95%;
+            margin: 3px auto;
+            .tab-container {
+                width:100%;
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+        .reportItem {
+            width: 49%;
+            margin-left: 0;
+            display: inline-block;
+            vertical-align: top;
+            &:nth-child(2n) {
+                margin-left: 2%;
+            }
+            border-radius: $radius-default;
+            &.item-notice {
+                .element {
+                    background-color: $color-notice;
+                }
+            }
+            &.item-warning {
+                .element {
+                    background-color: $color-warning;
+                }
+            }
+            &.item-error {
+                .element {
+                    background-color: $color-errorish;
+                }
+            }
+            .element {
+                display: block;
+                width:100%;
+                margin:0;
+                .label {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .content {
+                    width: 100%;
+                    font-size: 0.9em;
+                    padding: 5px;
+                    text-align: center;
+                }
+                &:first-child {
+                    border-radius: $radius-default $radius-default 0 0;
+                }
+                &:last-child {
+                    border-radius: 0 0 $radius-default $radius-default;
+                    @include box-shadow-shallow(#000);
+                    margin-bottom: 3px;
+                }
+                &.context {
+                    .content {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.loader {
+    display: none;
+}
+
+.info-box {
+    line-height: 1;
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.header,
+.footer{
+    padding: 5px 15px;
+    color: white;
+    display: block;
+    width: 100%;
+    height:50px;
+    background-color: $color-main;
+}
+
+.header {
+    .title {
+        font-size: 24px;
+        margin: 0 20px;
+    }
+    .name {
+
+    }
+
+}
+
+.footer {
+    .by {
+        color:black;
+    }
+    .powered {
+        float: right;
+    }
+}

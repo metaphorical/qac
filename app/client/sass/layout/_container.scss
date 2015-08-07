@@ -1,0 +1,15 @@
+/**
+ * Container module is used very often so it's predefined as module.
+ */
+.container {
+    @include clearfix;
+    width: 90%;
+    max-width: $container-width;
+    margin: 0 auto;
+    &.Reporter {
+        margin: -50px auto;
+        padding: 70px auto;
+        min-height: 100%;
+    }
+
+}

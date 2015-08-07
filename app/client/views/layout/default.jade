@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+        meta(name='viewport', content='width=device-width')
+        meta(name="apple-itunes-app", content="app-id=id845267420")
+
+        title Quantum Boilerplate
+        meta(name='description', content='')
+
+        link(rel='stylesheet', href='/css/style.css?v=#{cacheBuster}')
+        link(rel='shortcut icon', href='/img/favicon.ico' type='image/x-icon')
+
+        block head
+        body
+
+            block header
+                include partials/header.jade
+
+            div.container.Reporter
+                block content
+
+            block footer
+                include partials/footer.jade
+
+        block js
+            script(src='/js/home.js')
+

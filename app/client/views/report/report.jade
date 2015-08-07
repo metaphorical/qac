@@ -1,0 +1,50 @@
+div.third.tab-head.js-tab-head(data-aim="js-errors-list")
+    h3 Errors
+    ul.error-filter.js-filter(data-target="errors")
+        li.js-trig(data-target="a") A: !{errors.a.length}
+        li.js-trig(data-target="aa") AA: !{errors.aa.length}
+        li.js-trig(data-target="aaa") AAA: !{errors.aaa.length}
+div.third.tab-head.js-tab-head(data-aim="js-warnings-list")
+    h3 Warnings
+    ul.warning-filter.js-filter(data-target="warnings")
+        li.js-trig(data-target="a") A: !{warnings.a.length}
+        li.js-trig(data-target="aa") AA: !{warnings.aa.length}
+        li.js-trig(data-target="aaa") AAA: !{warnings.aaa.length}
+div.third.tab-head.js-tab-head(data-aim="js-notices-list")
+    h3 Notices
+    ul.notice-filter.js-filter(data-target="notices")
+        li.js-trig(data-target="a") A: !{notices.a.length}
+        li.js-trig(data-target="aa") AA: !{notices.aa.length}
+        li.js-trig(data-target="aaa") AAA: !{notices.aaa.length}
+
+div.tabs-container
+    div.tab-container.js-errors-list.js-tab-container.active
+        div.js-holder(data-standard="a")
+            each item in errors.a
+                include ./item
+        div.js-holder(data-standard="aa")
+            each item in errors.aa
+                include ./item
+        div.js-holder(data-standard="aaa")
+            each item in errors.aaa
+                include ./item
+    div.tab-container.js-warnings-list.js-tab-container
+        div.js-holder(data-standard="a")
+            each item in warnings.a
+                include ./item
+        div.js-holder(data-standard="aa")
+            each item in warnings.aa
+                include ./item
+        div.js-holder(data-standard="aaa")
+            each item in warnings.aaa
+                include ./item
+    div.tab-container.js-notices-list.js-tab-container
+        div.js-holder(data-standard="a")
+            each item in notices.a
+                include ./item
+        div.js-holder(data-standard="aa")
+            each item in notices.aa
+                include ./item
+        div.js-holder(data-standard="aaa")
+            each item in notices.aaa
+                include ./item

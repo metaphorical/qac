@@ -1,6 +1,6 @@
 {
   "name": "qac",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "Quantum accessibility testing tool",
   "main": "server.js",
   "repository": "https://github.com/metaphorical/qac",
@@ -22,7 +22,6 @@
     "browserify": "^9.0.3",
     "bucker": "^1.1.1",
     "express": "^4.12.3",
-    "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-base64-inline": "^1.0.0",
     "gulp-consolidate": "^0.1.2",
@@ -38,7 +37,6 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-svg-spritesheet": "0.0.3",
     "gulp-svg2png": "^0.3.0",
-    "gulp-svgo": "git+https://tcbot:8dxSQQtWHxhP@stash.vast.com/scm/mixdown/gulp-svgo.git#0.1.1",
     "gulp-uglify": "^1.1.0",
     "gulp-watchify": "^0.5.0",
     "jade": "^1.11.0",
@@ -47,9 +45,6 @@
     "jquery": "^1.11.2",
     "jshint-stylish": "^1.0.0",
     "lodash": "^3.3.0",
-    "nock": "^2.0.1",
-    "nodemon": "^1.3.7",
-    "pa11y": "^2.2.0",
     "through2": "^0.6.5",
     "watchify": "^3.2.3"
   },
@@ -190,6 +185,11 @@
   },
   "devDependencies": {
     "babelify": "^6.1.3",
+    "gulp": "^3.8.11",
+    "gulp-svgmin": "^1.2.0",
+    "nock": "^2.0.1",
+    "nodemon": "^1.3.7",
+    "pa11y": "^2.2.0",
     "phantomjs": "^1.9.18"
   }
 }

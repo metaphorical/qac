@@ -28,12 +28,11 @@ var Pa11yException = function (err) {
 var executePa11y = function(params, callback) {
     pa11y(params.options, function (error, test, exit) {
         if (error) {
-            console.log('Error', error)
-            throw new Pa11yException(error);
+            throw new Pa11yException(JSON.stringify(error));
         }
         test(params.url, function (err, results) {
             if (err) {
-                throw new Pa11yException(err);
+                throw new Pa11yException(JSON.stringify(err));
             }
             //Exit phantom.js
             exit();

@@ -1,3 +1,7 @@
 node_modules
 .idea
 npm-debug.log
+app/client/assets/js
+app/client/assets/fonts/iconfont
+app/client/assets/css
+app/client/assets/img/sprite.svg
